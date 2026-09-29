@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.rey3tie_mobiel.databinding.ActivityMainBinding
 import com.example.rey3tie_mobiel.pertemuan_4.FourthActivity
+import com.example.rey3tie_mobiel.pertemuan_5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
         private lateinit var binding: ActivityMainBinding
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
 
 
              }
+            binding.btnToFifth.setOnClickListener {
+                val intent = Intent(this, FifthActivity::class.java)
+                startActivity(intent)
+            }
 }
     override fun onStart() {
         super.onStart()
