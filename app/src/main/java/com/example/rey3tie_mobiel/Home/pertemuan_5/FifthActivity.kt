@@ -1,4 +1,4 @@
-    package com.example.rey3tie_mobiel.pertemuan_5
+package com.example.rey3tie_mobiel.Home.pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.rey3tie_mobiel.R
 import com.example.rey3tie_mobiel.databinding.ActivityFifthBinding
-import com.example.rey3tie_mobiel.databinding.ActivityFourthBinding
 import kotlin.jvm.java
 
     class FifthActivity : AppCompatActivity() {

@@ -2,17 +2,18 @@ package com.example.rey3tie_mobiel
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.rey3tie_mobiel.databinding.ActivityMainBinding
-import com.example.rey3tie_mobiel.pertemuan_4.FourthActivity
-import com.example.rey3tie_mobiel.pertemuan_5.FifthActivity
+import com.example.rey3tie_mobiel.Home.pertemuan_4.FourthActivity
+import com.example.rey3tie_mobiel.Home.pertemuan_5.FifthActivity
+import com.example.rey3tie_mobiel.Home.pertemuan_6.SixthActivity
 
-class MainActivity : AppCompatActivity() {
+
+class   MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,11 +38,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Tombol menuju FifthActivity
+
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnToSixth.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java)
+            startActivity(intent)
+        }
+        // -----------------------------------------------------------
 
 
         binding.btnLogout.setOnClickListener {
