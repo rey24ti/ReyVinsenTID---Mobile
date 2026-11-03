@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="180dp"
+    android:viewportWidth="360"
+    android:viewportHeight="180">
+
+    <!-- Layer Belakang (Soft Red Glow) -->
+    <path
+        android:fillAlpha="0.2"
+        android:fillColor="#FF1744"
+        android:pathData="M0,0 H360 V125 C260,175 140,85 0,135 Z" />
+
+    <!-- Layer Tengah (Soft Red) -->
+    <path
+        android:fillAlpha="0.4"
+        android:fillColor="#FF5252"
+        android:pathData="M0,0 H360 V100 C240,155 110,70 0,110 Z" />
+
+    <!-- Layer Depan Utama (Linear Gradient Merah Elegan) -->
+    <path
+        android:pathData="M0,0 H360 V75 C220,135 90,55 0,95 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="360"
+                android:endY="180"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#B71C1C" />
+                <item android:offset="0.5" android:color="#D32F2F" />
+                <item android:offset="1.0" android:color="#FF5252" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Ornamen Lingkaran Aksen -->
+    <path
+        android:fillAlpha="0.15"
+        android:fillColor="#FFFFFF"
+        android:pathData="M300,30 m-30,0 a30,30 0 1,1 60,0 a30,30 0 1,1 -60,0" />
+
+    <path
+        android:fillAlpha="0.2"
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,35 m-15,0 a15,15 0 1,1 30,0 a15,15 0 1,1 -30,0" />
+
+</vector>

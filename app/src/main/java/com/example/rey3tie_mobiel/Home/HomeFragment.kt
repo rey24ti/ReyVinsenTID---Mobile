@@ -13,9 +13,11 @@ import com.example.rey3tie_mobiel.AuthActivity
 import com.example.rey3tie_mobiel.Home.pertemuan_4.FourthActivity
 import com.example.rey3tie_mobiel.Home.pertemuan_5.FifthActivity
 import com.example.rey3tie_mobiel.Home.pertemuan_6.SixthActivity
+import com.example.rey3tie_mobiel.Home.pertemuan_9.NinthActivity
 import com.example.rey3tie_mobiel.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
+
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -29,15 +31,18 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
             title = "Home"
         }
+
         val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
 
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(requireContext(), FourthActivity::class.java)
-            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("name", "Politeknik Caltex Rumbai")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
             startActivity(intent)
@@ -52,6 +57,13 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), SixthActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnPertemuan9.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(requireContext())
@@ -68,12 +80,16 @@ class HomeFragment : Fragment() {
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                     requireActivity().finish()
-
                 }
                 .setNegativeButton("Tidak") { dialog, _ ->
                     dialog.dismiss()
                 }
                 .show()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

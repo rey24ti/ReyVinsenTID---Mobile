@@ -9,13 +9,23 @@
     <!-- ✅ Toolbar di bagian atas -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="#B71C1C"
+        app:titleTextColor="@android:color/white"
+        app:navigationIconTint="@android:color/white"
         app:title="Home"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ✅ Header Wave Background -->
+    <View
+        android:id="@+id/viewHeaderWave"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -36,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ke Fourth Activity"
+        app:backgroundTint="#2196F3"
         app:layout_constraintTop_toBottomOf="@id/tvWelcome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ke Fifth Activity"
+        app:backgroundTint="#21F348"
         app:layout_constraintTop_toBottomOf="@id/btnToFourth"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,21 +67,46 @@
         android:id="@+id/btnToSixth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pertemuan 6"
+        android:text="Ke Six Activity"
+        app:backgroundTint="#F3DE21"
         app:layout_constraintTop_toBottomOf="@id/btnToFifth"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
 
+    <!-- ✅ Button Pertemuan 9 -->
+    <Button
+        android:id="@+id/btnPertemuan9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ke Ninth Activity"
+        app:backgroundTint="#21F37C"
+        app:layout_constraintTop_toBottomOf="@id/btnToSixth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- ✅ Button Pertemuan 10 -->
+    <Button
+        android:id="@+id/btntoten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pertemuan 10"
+        app:layout_constraintTop_toBottomOf="@id/btnPertemuan9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- ✅ Logout sekarang berada di bawah Pertemuan 10 -->
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#D32F2F"
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnToSixth" />
+        app:layout_constraintTop_toBottomOf="@id/btntoten" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
