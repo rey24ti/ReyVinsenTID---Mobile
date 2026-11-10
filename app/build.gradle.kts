@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+
     namespace = "com.example.rey3tie_mobiel"
     compileSdk {
         version = release(37)
@@ -10,6 +11,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
     defaultConfig {
         applicationId = "com.example.rey3tie_mobiel"
         minSdk = 29
@@ -34,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("com.google.android.material:material:1.11.0")
