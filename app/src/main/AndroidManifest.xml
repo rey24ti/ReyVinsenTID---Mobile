@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Rey3Tie_Mobiel">
 
-        <!-- ✅ BaseActivity jadi LAUNCHER (halaman pertama) -->
+        <!-- ✅ SplashScreenActivity jadi LAUNCHER (halaman pertama) -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
@@ -17,12 +17,11 @@
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- SplashScreenActivity tidak lagi jadi launcher -->
+        <!-- BaseActivity -->
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
@@ -31,25 +30,35 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
         <activity
             android:name=".AuthActivity"
             android:exported="false" />
-        <activity android:name=".Home.pertemuan_4.FourthActivity" />
-        <activity android:name=".Home.pertemuan_5.FifthActivity" />
+
+        <!-- Pertemuan 4 & 5 -->
+        <activity android:name=".Home.pertemuan_4.FourthActivity"
+            android:exported="false" />
+        <activity android:name=".Home.pertemuan_5.FifthActivity"
+            android:exported="false" />
         <activity
             android:name=".Home.pertemuan_5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pertemuan 6 & 9 -->
         <activity
             android:name=".Home.pertemuan_6.SixthActivity"
             android:exported="false" />
         <activity
             android:name=".Home.pertemuan_9.NinthActivity"
             android:exported="false" />
+
+        <!-- ✅ Pertemuan 10 (Hanya dideklarasikan SATU KALI) -->
         <activity
-            android:name=".Home.pertemuan_10.TenActivity"
+            android:name=".Home.pertemuan_10.TenthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>

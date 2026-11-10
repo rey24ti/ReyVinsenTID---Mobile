@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("com.google.android.material:material:1.11.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")

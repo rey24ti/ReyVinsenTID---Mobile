@@ -14,6 +14,8 @@ import com.example.rey3tie_mobiel.Home.pertemuan_4.FourthActivity
 import com.example.rey3tie_mobiel.Home.pertemuan_5.FifthActivity
 import com.example.rey3tie_mobiel.Home.pertemuan_6.SixthActivity
 import com.example.rey3tie_mobiel.Home.pertemuan_9.NinthActivity
+// ✅ Tambahan Import untuk TenthActivity
+import com.example.rey3tie_mobiel.Home.pertemuan_10.TenthActivity
 import com.example.rey3tie_mobiel.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -64,6 +66,10 @@ class HomeFragment : Fragment() {
         }
 
 
+        binding.btnPertemuan10.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(requireContext())
