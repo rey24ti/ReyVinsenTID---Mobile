@@ -11,6 +11,7 @@ import com.example.rey3tie_mobiel.Home.HomeFragment
 import com.example.rey3tie_mobiel.Home.MessageFragment
 import com.example.rey3tie_mobiel.Home.MoreFragment
 import com.example.rey3tie_mobiel.databinding.ActivityBaseBinding
+import com.example.rey3tie_mobiel.note.NoteFragment
 
 class BaseActivity : AppCompatActivity() {
 
@@ -38,6 +39,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else ->false
